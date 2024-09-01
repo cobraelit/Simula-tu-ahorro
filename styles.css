@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('CIELO.png'); /* Fondo de la página */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo de la página */
+    margin-top: 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo del contenedor con transparencia */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 60%; /* Ajusta el ancho del simulador */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.header-icon {
+    width: 70px; /* Tamaño del icono más grande */
+    height: auto;
+    margin-right: 15px; /* Espacio entre el icono y el título */
+}
+
+h1 {
+    color: #4CAF50;
+    margin: 0;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.result-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.result-image {
+    width: 100%;
+    height: auto;
+}
+
+.info-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.436); /* Fondo transparente */
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 20px; /* Tamaño de letra más grande */
+    font-weight: bold; /* Texto en negrilla */
+    text-align: center; /* Alineación centrada del texto */
+    width: 50%; /* Ancho del texto */
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column; /* Coloca las imágenes una debajo de otra */
+    justify-content: center;
+    align-items: center;
+    width: 35%; /* Ajusta el ancho de la barra lateral */
+}
+
+.sidebar img {
+    width: 100%; /* Ajusta el ancho de las imágenes */
+    margin-bottom: 20px;
+    object-fit: contain;
+    max-height: 450px; /* Tamaño máximo de la imagen */
+}
+
+.sidebar img.pan {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+    max-height: 500px; /* Tamaño máximo para la imagen 'pan' */
+}
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .header-icon {
+        width: 50px; /* Reduce el tamaño del icono en pantallas pequeñas */
+        margin-right: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .sidebar img {
+        width: 80%;
+        max-height: 300px; /* Ajuste del tamaño en dispositivos móviles */
+    }
+
+    .info-text {
+        width: 90%; /* Ajuste para pantallas más pequeñas */
+        font-size: 18px; /* Reduce el tamaño de la fuente */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (por ejemplo, teléfonos en orientación vertical) */
+@media (max-width: 480px) {
+    .header-icon {
+        width: 40px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .info-text {
+        font-size: 16px;
+    }
+}
